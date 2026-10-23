@@ -1,8 +1,12 @@
+server:
+  port: 8088
 spring:
+  config:
+    import: optional:file:./datasource-local.yml,optional:file:./backend/datasource-local.yml
   datasource:
-    url: jdbc:postgresql://localhost:5432/tickets
+    url: jdbc:postgresql://localhost:5434/tickets
     username: ${DB_USER:tickets}
-    password: ${DB_PASSWORD}
+    password: ${LOCAL_DB_PASSWORD:${DB_PASSWORD:}}
   sql:
     init:
       mode: always

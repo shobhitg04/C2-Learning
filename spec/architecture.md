@@ -36,7 +36,7 @@ flowchart LR
   chat --> ollama
 ```
 
-`AskService` has no call into `TicketService`. A question cannot create a ticket, add a comment, change status, change assignee, or write resolution notes.
+`AskService` has no call into `TicketService`. A question cannot create a ticket, add a comment, change status, change assignee, or write resolution notes. The browser client at `http://localhost:3000` calls this API, and the server allows that origin only.
 
 ## Package layout
 

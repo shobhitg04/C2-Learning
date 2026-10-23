@@ -59,11 +59,11 @@ Edit loads the ticket first. The status select shows the stored status, labeled 
 
 ## Assistant panel
 
-The panel has a question box and an Ask button. Ask calls `POST /api/ai/ask` and does not send ticket fields. The button is disabled while the request runs.
+The panel has a question box and an Ask button. Ask calls `POST /api/ai/ask` and does not send ticket fields. While the request runs, the panel shows `Asking...` and the button is disabled.
 
 A `200` with `noRelevantTickets` false shows `answer` verbatim, then one source row per item, in response order. A source row shows `ticketId`, `title`, and `similarity` as returned. The ticket id links to `/tickets/{ticketId}`. A `200` with `noRelevantTickets` true shows `answer` and no source list. The no-match answer is the server string, including the period. It is not shown as an error.
 
-Asking does not change the list, the detail, or the form. A question is not prefilled from the open ticket.
+A `503` shows `Question could not be answered`. A network failure shows `The server could not be reached.` The previous answer stays. Asking does not change the list, the detail, or the form. A question is not prefilled from the open ticket.
 
 ## User flows
 
