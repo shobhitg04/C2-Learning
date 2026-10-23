@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form method="get" action="/tickets">
+  <input name="keyword" th:value="${keyword}">
+  <select name="status">
+    <option value="">All</option>
+    <option value="OPEN">OPEN</option>
+    <option value="IN_PROGRESS">IN_PROGRESS</option>
+    <option value="RESOLVED">RESOLVED</option>
+    <option value="CLOSED">CLOSED</option>
+    <option value="CANCELLED">CANCELLED</option>
+  </select>
+  <button>Search</button>
+</form>
+<a href="/tickets/new">Create ticket</a>
+<p th:if="${#lists.isEmpty(tickets)}">No tickets match.</p>
+<table>
+  <tr th:each="t : ${tickets}">
+    <td><a th:href="@{/tickets/{id}(id=${t.id})}" th:text="${t.id}"></a></td>
+    <td th:text="${t.description}"></td>
+    <td th:text="${t.status}"></td>
+    <td th:text="${t.priority}"></td>
+    <td th:text="${t.category}"></td>
+    <td th:text="${t.assignee == null ? 'Unassigned' : t.assignee}"></td>
+  </tr>
+</table>
+<p>Page <span th:text="${page + 1}"></span></p>
+<a th:if="${page > 0}" th:href="@{/tickets(keyword=${keyword},status=${status},page=${page - 1})}">Previous</a>
+<a th:if="${(page + 1) * 20 < total}" th:href="@{/tickets(keyword=${keyword},status=${status},page=${page + 1})}">Next</a>
+</body>
+</html>

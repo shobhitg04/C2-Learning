@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:if="${banner}" th:text="${banner}"></p>
+<form th:action="@{/tickets/{id}/edit(id=${ticket.id})}" method="post">
+  <p th:text="${ticket.description}"></p>
+  <select name="status">
+    <option value="CURRENT">Current</option>
+    <option th:each="target : ${targets}" th:value="${target}" th:text="${target}"></option>
+  </select>
+  <input name="assignee" th:value="${ticket.assignee}">
+  <textarea name="resolutionNotes" th:text="${ticket.resolutionNotes}"></textarea>
+  <label><input type="checkbox" name="clearNotes" value="true"> Clear resolution notes</label>
+  <button>Save</button>
+</form>
+</body>
+</html>

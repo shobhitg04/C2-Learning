@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="${ticket.id}"></p>
+<p th:text="${ticket.description}"></p>
+<p th:text="${ticket.status}"></p>
+<p th:text="${ticket.priority}"></p>
+<p th:text="${ticket.category}"></p>
+<p th:text="${ticket.assignee == null ? 'Unassigned' : ticket.assignee}"></p>
+<p th:text="${ticket.resolutionNotes == null ? 'None' : ticket.resolutionNotes}"></p>
+<ul>
+  <li th:each="c : ${ticket.comments}" th:text="${c.body}"></li>
+</ul>
+<form th:action="@{/tickets/{id}/comments(id=${ticket.id})}" method="post">
+  <textarea name="body"></textarea>
+  <button>Add comment</button>
+</form>
+<a th:href="@{/tickets/{id}/edit(id=${ticket.id})}">Edit</a>
+</body>
+</html>

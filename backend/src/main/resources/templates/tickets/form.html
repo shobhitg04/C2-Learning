@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form id="create-form">
+  <textarea name="description"></textarea>
+  <p id="description-error"></p>
+  <select name="priority">
+    <option value="">Select</option>
+    <option>HIGH</option>
+    <option>MEDIUM</option>
+    <option>LOW</option>
+  </select>
+  <p id="priority-error"></p>
+  <input name="category">
+  <p id="category-error"></p>
+  <input name="assignee">
+  <p id="assignee-error"></p>
+  <button>Create</button>
+</form>
+<script>
+document.getElementById('create-form').addEventListener('submit', function (e) {
+  var description = e.target.querySelector('[name=description]');
+  if (description.value.trim() === '') {
+    e.preventDefault();
+    document.getElementById('description-error').textContent = 'must not be blank';
+    return;
+  }
+  e.preventDefault();
+  var assignee = e.target.assignee.value.trim();
+  fetch('/api/tickets', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      description: description.value,
+      priority: e.target.priority.value,
+      category: e.target.category.value,
+      assignee: assignee === '' ? null : assignee
+    })
+  }).then(function (response) {
+    return response.json().then(function (body) { return {ok: response.ok, body: body}; });
+  }).then(function (result) {
+    if (result.ok) {
+      location.href = '/tickets/' + result.body.id;
+      return;
+    }
+    (result.body.fieldErrors || []).forEach(function (err) {
+      var slot = document.getElementById(err.field + '-error');
+      if (slot) slot.textContent = err.message;
+    });
+  });
+});
+</script>
+</body>
+</html>

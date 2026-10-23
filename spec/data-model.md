@@ -19,6 +19,8 @@ A ticket is one row. `id` is the public id returned by `POST /api/tickets`.
 |---|---|---|
 | `ticket_pkey` | `id` | Lookup by `GET /api/tickets/{id}` and list pagination. |
 
+Public ids are allocated from the PostgreSQL sequence `ticket_id_seq`, which starts at 1001. The stored id is `TKT-` plus that value. On an empty database the first ticket is `TKT-1001`.
+
 ## comment
 
 Each comment is one row and one vector chunk. `created_at` then `id` is the comment order used as `groupIndex`.
