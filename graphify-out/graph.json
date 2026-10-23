@@ -1,0 +1,246 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_folder_enablement",
+        "label": "Graphiphy Folder Enablement",
+        "nodes": [
+          "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy",
+          "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphiphy",
+          "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill",
+          "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Graphiphy",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphiphy",
+      "community": 2,
+      "norm_label": "graphiphy"
+    },
+    {
+      "label": "Enable Graphiphy",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy",
+      "community": 0,
+      "norm_label": "enable graphiphy"
+    },
+    {
+      "label": "Graphify",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L16",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify",
+      "community": 2,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "Graphify Skill",
+      "file_type": "document",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L16",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill",
+      "community": 1,
+      "norm_label": "graphify skill"
+    },
+    {
+      "label": "grok-4.7",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L13",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7",
+      "community": 1,
+      "norm_label": "grok-4.7"
+    },
+    {
+      "label": "read_file_v2",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L15",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_read_file_v2",
+      "community": 1,
+      "norm_label": "read_file_v2"
+    },
+    {
+      "label": "SpecStory",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_specstory",
+      "community": 0,
+      "norm_label": "specstory"
+    },
+    {
+      "label": "Cursor IDE Session",
+      "file_type": "concept",
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_cursor_ide_session",
+      "community": 0,
+      "norm_label": "cursor ide session"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphiphy"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphiphy",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_cursor_ide_session",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_read_file_v2",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_cursor_ide_session",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_read_file_v2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_cursor_ide_session",
+      "target": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_specstory"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_folder_enablement",
+      "label": "Graphiphy Folder Enablement",
+      "nodes": [
+        "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_enable_graphiphy",
+        "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphiphy",
+        "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_graphify_skill",
+        "specstory_history_2026_10_23_13_10_10z_graphiphy_folder_enablement_grok_4_7"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-10-23_13-10-10Z-graphiphy-folder-enablement.md"
+    }
+  ]
+}
