@@ -10,13 +10,16 @@
 - **THEN** the response is `200`, `noRelevantTickets` is `false`, and `sources` contains that ticket once
 
 ### Requirement: Retrieval limits
-The search MUST read `app.rag.top-k` and `app.rag.similarity-threshold` from configuration. It MUST consider at most that many nearest chunks, MUST omit chunks below the threshold, and MUST treat a higher score as closer. A cosine distance MUST be converted with `similarity = 1 - distance` before that comparison. Passing chunks MUST be grouped by ticket. Each source has `ticketId`, `title` equal to that ticket's description, and `similarity` equal to that ticket's highest passing chunk score. Sources are ordered by `similarity` descending, then `ticketId` ascending.
+The search MUST read `app.rag.top-k` and `app.rag.similarity-threshold` from configuration. It MUST consider at most that many nearest chunks, MUST omit chunks below the threshold, and MUST treat a higher score as closer. A cosine distance MUST be converted with `similarity = 1 - distance` before that comparison.
 
 #### Scenario: Threshold drops a near miss
 - **WHEN** the nearest chunk scores below the configured threshold
 - **THEN** that chunk is not a source and is not sent to the chat model
 
-#### Scenario: One source per ticket
+### Requirement: One source per ticket
+Passing chunks MUST be grouped by ticket. Each source has `ticketId`, `title` equal to that ticket's description, and `similarity` equal to the highest passing chunk score for that ticket. Sources MUST be ordered by `similarity` descending, then `ticketId` ascending.
+
+#### Scenario: Two chunks collapse
 - **WHEN** two chunks of the same ticket both pass the threshold
 - **THEN** `sources` contains that ticket once and `similarity` is the higher score
 

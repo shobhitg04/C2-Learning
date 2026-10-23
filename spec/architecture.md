@@ -10,9 +10,9 @@ HTTP enters through two controllers. Ticket writes re-index that ticket. The ass
 flowchart LR
   client[Client]
   tickets[TicketController]
-  assistant[AssistantController]
+  assistant[AskController]
   ticketService[TicketService]
-  assistantService[AssistantService]
+  assistantService[AskService]
   ticketsRepo[TicketRepository]
   indexer[TicketIndexer]
   vectors[PgVectorStore]
@@ -36,7 +36,7 @@ flowchart LR
   chat --> ollama
 ```
 
-`AssistantService` has no call into `TicketService`. A question cannot create a ticket, add a comment, change status, change assignee, or write resolution notes.
+`AskService` has no call into `TicketService`. A question cannot create a ticket, add a comment, change status, change assignee, or write resolution notes.
 
 ## Package layout
 

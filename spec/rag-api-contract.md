@@ -84,13 +84,13 @@ Do not use general knowledge.
 Do not create a ticket, add a comment, change status, change assignee, or write resolution notes.
 ```
 
-If the model replies exactly `No relevant tickets found.`, the service returns that answer, `sources` `[]`, and `noRelevantTickets` `true`. If the answer contains a ticket id that was not retrieved, the service discards the model text and returns the same no-match body. A grounded answer keeps the retrieved `sources` and `noRelevantTickets` `false`.
+If the model replies exactly `No relevant tickets found.`, the service returns that answer, `sources` `[]`, and `noRelevantTickets` `true`. If the answer contains a ticket id that was not retrieved, the service discards the model text, logs a warning that includes that id, and returns the same no-match body. A grounded answer keeps the retrieved `sources` and `noRelevantTickets` `false`.
 
 | Model output | Response |
 |---|---|
 | Cites only retrieved ticket ids | `200`, those sources, `noRelevantTickets` `false` |
 | Exact `No relevant tickets found.` | `200`, `sources` `[]`, `noRelevantTickets` `true` |
-| Any other `TKT-` id | `200`, no-match body. The invented id is not returned |
+| Any other `TKT-` id | `200`, no-match body. The invented id is not returned. A warning is logged with that id |
 
 **Trade-offs.** The prompt tells the model to stay inside the context. The service still checks ticket ids because the prompt does not bind the model. Discarding an ungrounded answer hides a partial fact that was retrieved. Returning the invented id would fail FR-13.
 
